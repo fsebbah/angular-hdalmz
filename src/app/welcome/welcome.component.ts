@@ -56,4 +56,9 @@ export class WelcomeComponent implements OnInit {
     return this.name;
   }
   
+  updateName($event:Event){
+    const element = $event.target as HTMLInputElement;
+    this.name = element.value;
+  }
+
 }
