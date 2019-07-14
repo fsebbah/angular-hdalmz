@@ -7,8 +7,9 @@
       <span *ngIf="isFirst">{{city}}</span>
   </li>
   -->
-  <li *ngFor= "let car of cars"><span>{{car.name}} - {{car.color}}</span>
-
+  <li *ngFor= "let car of cars">
+    <span>Color : {{car.color}}</span>
+    <span> Name : {{car.name}}</span>
   </li>
 
 </ul>
