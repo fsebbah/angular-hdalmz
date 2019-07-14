@@ -26,10 +26,12 @@ import { Component, OnInit,Input } from '@angular/core';
 export class WelcomeComponent implements OnInit {
   @Input() name:string ;
   userIsLoggedIn = false;
-
+  isLoggedInClass = 'is-logged-in';
   constructor() { 
     this.name = 'Franck';
   }
+
+
 
   isLoggedIn(){
     return this.userIsLoggedIn;

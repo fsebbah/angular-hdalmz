@@ -3,10 +3,19 @@
 }
 */
 
-
+/*
 :host{
   display:block;
   height: 300px;
   width:300px;
   background-color:greenyellow;
+}
+*/
+
+.is-logged-in{
+  color:blue;
+}
+
+.is-not-logged{
+  color:red;
 }
