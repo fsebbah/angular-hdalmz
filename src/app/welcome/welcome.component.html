@@ -1,4 +1,6 @@
 <p>
-welcome Component
+welcome Component {{getName()}}
 </p>
-<button type="button" (click)="displayName()">Display Name</button>
+
+<h1>{{isLoggedIn() ? 'Welcome' :' Please Loggin'}}</h1>
+<button type="button" (click)="login()">Login</button>

@@ -25,9 +25,18 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
   @Input() name:string ;
+  userIsLoggedIn = false;
 
   constructor() { 
     this.name = 'Franck';
+  }
+
+  isLoggedIn(){
+    return this.userIsLoggedIn;
+  }
+
+  login(){
+    this.userIsLoggedIn = !this.userIsLoggedIn;
   }
 
   ngOnInit() {
@@ -43,5 +52,8 @@ export class WelcomeComponent implements OnInit {
     alert(this.name);
   }
 
+  getName(){
+    return this.name;
+  }
   
 }
