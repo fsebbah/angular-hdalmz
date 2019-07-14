@@ -1,12 +1,14 @@
+<p>Cities :</p>
+<ul>
+  <!--<li *ngFor="let city of cities">{{city}}</li>-->
+  <!--<li *ngFor="let city of getCities() let i = index;">City : {{i+1}} {{city}}</li>-->
+  <!--
+  <li *ngFor="let city of getCities(); first as isFirst">
+      <span *ngIf="isFirst">{{city}}</span>
+  </li>
+  -->
+  <li *ngFor= "let car of cars"><span>{{car.name}} - {{car.color}}</span>
 
-<!--<h1 [class.is-not-logged-in]="!isLoggedIn()"
-    [class.is-logged-in]="isLoggedIn()">welcome Component</h1>
--->
-<!--<h1 class="{{isLoggedIn() ? 'is-logged-in' : 'is-not-logged-in' }}">welcome Component</h1>-->
+  </li>
 
-<h1 id="welcome-message">welcome Component</h1>
-<!--<h1 [ngStyle]="{'color':isLoggedIn() ? 'red' : 'blue'}">Welcome Component</h1>-->
-
-<button type="button" (click)="login()">Login</button>
-<!--<input *ngIf="isLoggedIn()" (input)="updateName($event)" type="text">-->
-<input [hidden]="!isLoggedIn()" (input)="updateName($event)" type="text">
+</ul>

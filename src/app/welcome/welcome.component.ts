@@ -27,8 +27,28 @@ export class WelcomeComponent implements OnInit {
   @Input() name:string ;
   userIsLoggedIn = false;
   isLoggedInClass = 'is-logged-in';
+  cities = ['Paris','London','Berlin','Moscow']; 
+  cars = [
+    {
+      color:'blue',
+      name:'chevy'
+    },
+    {
+      color:'red',
+      name:'ford'
+    },
+    {
+      color:'green',
+      name:'dodge'
+    }
+  ];
+
   constructor(private renderer: Renderer2) { 
     
+  }
+
+  getCities(){
+    return this.cities.map(city => city.toLocaleUpperCase() );
   }
 
   isLoggedIn(){
