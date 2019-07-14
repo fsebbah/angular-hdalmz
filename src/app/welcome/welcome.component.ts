@@ -27,8 +27,8 @@ export class WelcomeComponent implements OnInit {
   @Input() name:string ;
   userIsLoggedIn = false;
   isLoggedInClass = 'is-logged-in';
-  constructor(private render: Renderer2) { 
-    this.name = 'Franck';
+  constructor(private renderer: Renderer2) { 
+    
   }
 
   isLoggedIn(){
@@ -43,8 +43,8 @@ export class WelcomeComponent implements OnInit {
     //this.setUpperCase();
     //console.log(this.name);
     const element = document.getElementById('welcome-message');
-    element.classList.add('is-logged-in');
-
+    //element.classList.add('is-logged-in');
+    this.renderer.addClass(element,'is-logged-in');
   }
 
   setUpperCase(){
