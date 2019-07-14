@@ -42,8 +42,8 @@ export class WelcomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setUpperCase();
-    console.log(this.name);
+    //this.setUpperCase();
+    //console.log(this.name);
   }
 
   setUpperCase(){

@@ -1,7 +1,9 @@
-<h1 [class.is-not-logged-in]="!isLoggedIn()"
-    [class.is-logged-in]="isLoggedIn()"
 
->welcome Component</h1>
+<!--<h1 [class.is-not-logged-in]="!isLoggedIn()"
+    [class.is-logged-in]="isLoggedIn()">welcome Component</h1>
+-->
+<h1 class="{{isLoggedIn() ? 'is-logged-in' : 'is-not-logged-in' }}">welcome Component</h1>
+
 
 <button type="button" (click)="login()">Login</button>
 <!--<input *ngIf="isLoggedIn()" (input)="updateName($event)" type="text">-->
