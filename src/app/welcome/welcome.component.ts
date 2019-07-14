@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -27,11 +27,9 @@ export class WelcomeComponent implements OnInit {
   @Input() name:string ;
   userIsLoggedIn = false;
   isLoggedInClass = 'is-logged-in';
-  constructor() { 
+  constructor(private render: Renderer2) { 
     this.name = 'Franck';
   }
-
-
 
   isLoggedIn(){
     return this.userIsLoggedIn;
@@ -44,6 +42,9 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     //this.setUpperCase();
     //console.log(this.name);
+    const element = document.getElementById('welcome-message');
+    element.classList.add('is-logged-in');
+
   }
 
   setUpperCase(){
