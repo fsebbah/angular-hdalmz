@@ -2,5 +2,6 @@
 welcome Component {{getName()}}
 </p>
 
-<h1>{{isLoggedIn() ? 'Welcome' :' Please Loggin'}}</h1>
-<button type="button" (click)="login()">Login</button>
+<!--<h1>{{isLoggedIn() ? 'Welcome' :' Please Loggin'}}</h1>
+<button type="button" (click)="login()">Login</button>-->
+<input (input)="updateName($event)" type="text">
