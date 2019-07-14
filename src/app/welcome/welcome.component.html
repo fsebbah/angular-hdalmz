@@ -5,4 +5,4 @@ welcome Component {{getName()}}
 <!--<h1>{{isLoggedIn() ? 'Welcome' :' Please Loggin'}}</h1>-->
 <button type="button" (click)="login()">Login</button>
 <!--<input *ngIf="isLoggedIn()" (input)="updateName($event)" type="text">-->
-<input [hidden]="isLoggedIn()" (input)="updateName($event)" type="text">
+<input [hidden]="!isLoggedIn()" (input)="updateName($event)" type="text">
