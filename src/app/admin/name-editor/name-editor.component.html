@@ -4,3 +4,7 @@
   <label for="">Name</label>
   <input type="text" [formControl]="name">
 </form>
+
+<p>Name: {{name.value}}</p>
+
+<button type="button" (click)="updateName()">Update name</button>

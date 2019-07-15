@@ -21,7 +21,8 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
   exports : [
     LoginComponent,
     WelcomeComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    NameEditorComponent
   ]
 })
 export class AdminModule { }
