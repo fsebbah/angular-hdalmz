@@ -26,6 +26,10 @@ export class ProfileEditorComponent implements OnInit {
 
   onSubmit(){
     console.log(this.profileForm.value);
+  }
+
+  updateProfile(){
+    console.log(this.profileForm.value);
   this.profileForm.patchValue({
     firstName:'Nancy',
     address:{
