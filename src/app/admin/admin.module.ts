@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-import { WelcomeService } from './welcome/welcome.service';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +16,6 @@ import { WelcomeService } from './welcome/welcome.service';
     LoginComponent,
     WelcomeComponent
   ],
-  providers: [WelcomeService]
+  providers: []
 })
 export class AdminModule { }
