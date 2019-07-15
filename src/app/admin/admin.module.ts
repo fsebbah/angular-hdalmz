@@ -17,7 +17,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
   ],
   exports : [
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeroFormComponent
   ]
 })
 export class AdminModule { }
