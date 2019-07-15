@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Renderer2 } from '@angular/core';
+import {WelcomeService} from './welcome.service';
 
 @Component({
   selector: 'app-welcome',
@@ -9,5 +10,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  constructor(){}
+  constructor(private welcomeService: WelcomeService){
+    return this.welcomeService.getPerson();
+  }
 }
