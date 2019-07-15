@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import {WelcomeComponent} from './welcome/welcome.component';
+import { WelcomeService } from './welcome/welcome.service';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import {WelcomeComponent} from './welcome/welcome.component';
     LoginComponent,
     WelcomeComponent
   ],
-  providers: []
+  providers: [WelcomeService]
 })
 export class AdminModule { }
