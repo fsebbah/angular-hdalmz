@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
-import { ColorPipe } from './welcome/color.pipe'
+import { ColorPipe } from './welcome/color.pipe';
+import { HighlightDirective } from './welcome/highlight.directive'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,WelcomeComponent, LoginComponent, ColorPipe ],
+  declarations: [ AppComponent, HelloComponent,WelcomeComponent, LoginComponent, ColorPipe, HighlightDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
