@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     HeroFormComponent
   ],  
   imports: [
-    CommonModule
+    CommonModule,FormsModule
   ],
   exports : [
     LoginComponent,
