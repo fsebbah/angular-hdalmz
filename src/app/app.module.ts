@@ -4,6 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AdminModule} from './admin/admin.module';
 import { AppComponent } from './app.component';
 import {WelcomeService} from './admin/welcome/welcome.service';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 //import { HelloComponent } from './hello.component';
@@ -14,7 +15,7 @@ import {WelcomeService} from './admin/welcome/welcome.service';
 //import { UnlessDirective } from './welcome/unless.directive'
 
 @NgModule({
-  imports:      [ BrowserModule,AppRoutingModule,AdminModule ],
+  imports:      [ BrowserModule,AppRoutingModule,ReactiveFormsModule,AdminModule ],
   providers: [WelcomeService],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],

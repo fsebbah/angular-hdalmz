@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { FormsModule } from '@angular/forms';
+import { NameEditorComponent } from './name-editor/name-editor.component';
 
 
 
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LoginComponent,
     WelcomeComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    NameEditorComponent
   ],  
   imports: [
     CommonModule,FormsModule
