@@ -8,7 +8,7 @@ import { FormGroup,FormControl,FormBuilder } from '@angular/forms';
 })
 
 export class ProfileEditorComponent implements OnInit {
-
+/*
   profileForm = new FormGroup({
       firstName : new FormControl('Franck'),
       lastName : new FormControl('Sebbah'),  
@@ -18,7 +18,19 @@ export class ProfileEditorComponent implements OnInit {
         state : new FormControl('Ile de France')
       })
   })
-  
+  */
+
+  profileForm = this.fb.group({
+      firstName : ['Franck'],
+      lastName : ['Sebbah'],  
+      address: this.fb.group({
+        zip : ['75009'],
+        city : ['Paris'],
+        state : ['Ile de France']
+      })
+  })
+
+
   constructor(private fb: FormBuilder ) { }
 
   ngOnInit() {
@@ -29,15 +41,15 @@ export class ProfileEditorComponent implements OnInit {
   }
 
   updateProfile(){
-    console.log(this.profileForm.value);
-  this.profileForm.patchValue({
-    firstName:'Nancy',
-    address:{
-      zip:'77000',
-      city:'Melun',
-      state:'Seine & Marne'
-    }
-  })
+    //this.profileForm.get('firstName').setValue('Nancy');    
+    this.profileForm.patchValue({
+      firstName:'Nancy',
+      address:{
+        zip:'77000',
+        city:'Melun',
+        state:'Seine & Marne'
+      }
+    })
 
   }
 }
