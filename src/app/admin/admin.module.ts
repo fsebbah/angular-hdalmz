@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 
 
@@ -16,7 +16,7 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     NameEditorComponent
   ],  
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule,ReactiveFormsModule
   ],
   exports : [
     LoginComponent,
