@@ -1,4 +1,5 @@
-<p>Cities :</p>
+<input type="text" name=""car-color [(ngModel)]="carColor">
+
 <ul>
   <!--<li *ngFor="let city of cities">{{city}}</li>-->
   <!--<li *ngFor="let city of getCities() let i = index;">City : {{i+1}} {{city}}</li>-->
@@ -7,7 +8,7 @@
       <span *ngIf="isFirst">{{city}}</span>
   </li>
   -->
-  <li *ngFor= "let car of cars">
+  <li *ngFor= "let car of cars | color">
     <span>Color : {{car.color}}</span>
     <span> Name : {{car.name | uppercase}}</span>
     <span> Purchased: {{car.purchased | date: 'dd/MMMM/yyy' | uppercase}}</span>
