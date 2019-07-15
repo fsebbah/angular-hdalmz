@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from '../../hero';
+import {NgForm} from '@angular/forms';
+
 @Component({
   selector: 'app-hero-form',
   templateUrl: './hero-form.component.html',
@@ -19,7 +21,8 @@ export class HeroFormComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSubmit(){
+  onSubmit(heroForm: NgForm){
     console.log(this.model);
+    console.log(this.heroForm);
   }
 }
