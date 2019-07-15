@@ -3,11 +3,22 @@
 <form (ngSubmit)="onSubmit()">
   <label for="">Name</label>
   <input type="text" name="name">
+  <br>
+  <br>
+  
   <label for="">Age</label>
   <input type="text" name="age">
+
+  <br>
+  <br>
+
   <label for="">Power</label>
   <select name="power">
     <option *ngFor="let power of powers" [value]="power">{{power}}</option>
   </select>
+  
+  <br>
+  <br>
+
   <button type="submit" >Submit</button>
 </form>
