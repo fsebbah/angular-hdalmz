@@ -5,6 +5,7 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 
 
@@ -13,7 +14,8 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     LoginComponent,
     WelcomeComponent,
     HeroFormComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ProfileEditorComponent
   ],  
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule
