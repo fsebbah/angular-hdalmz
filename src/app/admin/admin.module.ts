@@ -7,15 +7,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
     WelcomeComponent,
     HeroFormComponent,
     NameEditorComponent,
-    ProfileEditorComponent,
     ProfileEditorComponent
   ],  
   imports: [
@@ -25,7 +22,8 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     LoginComponent,
     WelcomeComponent,
     HeroFormComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ProfileEditorComponent
   ]
 })
 export class AdminModule { }
