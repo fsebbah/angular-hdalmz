@@ -23,6 +23,6 @@ export class HeroFormComponent implements OnInit {
   }
   onSubmit(heroForm: NgForm){
     console.log(this.model);
-    console.log(this.heroForm);
+    console.log(heroForm);
   }
 }
