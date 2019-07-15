@@ -46,6 +46,7 @@ export class WelcomeComponent implements OnInit {
     }
   ];
 
+  carColor:String
   constructor(private renderer: Renderer2) { 
     
   }

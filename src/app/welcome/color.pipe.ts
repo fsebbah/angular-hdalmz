@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ColorPipe implements PipeTransform {
 
-  transform(cars: any, args?: any): any {
-    return cars.filter(car => car.color ==='blue');
+  transform(cars: any, carColor?: string): any {
+    console.log(carColor);
+    return (!carColor) ? cars : cars.filter(car => car.color.includes(carColor));
   }
 
 }
