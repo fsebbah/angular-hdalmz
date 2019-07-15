@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Hero} from '../../hero';
 @Component({
   selector: 'app-hero-form',
   templateUrl: './hero-form.component.html',
