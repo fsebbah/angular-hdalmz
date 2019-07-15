@@ -15,7 +15,7 @@ import {WelcomeService} from './admin/welcome/welcome.service';
 //import { UnlessDirective } from './welcome/unless.directive'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,FormsModule,AppRoutingModule,AdminModule ],
+  imports:      [ BrowserModule,FormsModule,AppRoutingModule,AdminModule ],
   providers: [WelcomeService],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
