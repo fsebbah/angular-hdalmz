@@ -4,7 +4,9 @@
   <div>
     <label for="">First Name</label>
     <input type="text" formControlName="firstName">
-  </div>
+    <p *ngIf="firstName.errors?.required">Firstname is required:</p>
+    <p *ngIf="firstName.errors?.minlenght">Firstname must be at least 5 characters.</p>  
+</div>
   <br>
   <div>
     <label for="">Last Name</label>
