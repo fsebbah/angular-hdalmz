@@ -51,6 +51,16 @@ export class WelcomeComponent implements OnInit {
     
   }
 
+  addCar(){
+    const newCar = {
+      color:'green',
+      name : 'gmc',
+      purchased : new Date()
+    }
+    this.cars.push(newCar);
+    //this.cars = [].concat(this.cars).concat(newCar);
+  }
+
   getCities(){
     return this.cities.map(city => city.toLocaleUpperCase() );
   }
