@@ -31,15 +31,18 @@ export class WelcomeComponent implements OnInit {
   cars = [
     {
       color:'blue',
-      name:'chevy'
+      name:'chevy',
+      purchased : new Date()
     },
     {
       color:'red',
-      name:'ford'
+      name:'ford',
+      purchased : new Date()
     },
     {
       color:'green',
-      name:'dodge'
+      name:'dodge',
+      purchased : new Date()
     }
   ];
 

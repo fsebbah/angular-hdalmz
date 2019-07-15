@@ -9,7 +9,8 @@
   -->
   <li *ngFor= "let car of cars">
     <span>Color : {{car.color}}</span>
-    <span> Name : {{car.name}}</span>
+    <span> Name : {{car.name | uppercase}}</span>
+    <span> Purchased: {{car.purchased | date: 'dd/MMMM/yyy' | uppercase}}</span>
   </li>
 
 </ul>
