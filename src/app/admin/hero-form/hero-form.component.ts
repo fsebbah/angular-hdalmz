@@ -13,7 +13,7 @@ export class HeroFormComponent implements OnInit {
     'Time Travel',
     'Super Speed'
   ];
-  model = new Hero();
+  model = new Hero(21,'Dr Strange','Time Travel');
 
   constructor() { }
 
