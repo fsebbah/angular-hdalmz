@@ -8,7 +8,7 @@ import { FormGroup,FormControl,FormBuilder,FormArray,Validators } from '@angular
 })
 
 export class ProfileEditorComponent implements OnInit {
-
+  /*
   profileForm = new FormGroup({
       firstName : new FormControl('',[
         Validators.required,
@@ -22,7 +22,7 @@ export class ProfileEditorComponent implements OnInit {
       }),
       aliases: new FormArray([])
   })
-  
+  */
   /*
   profileForm = this.fb.group({
       firstName : ['Franck'],
