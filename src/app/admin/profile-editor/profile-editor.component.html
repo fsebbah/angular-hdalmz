@@ -6,6 +6,7 @@
     <input type="text" formControlName="firstName">
     <p *ngIf="firstName.errors?.required">Firstname is required !</p>
     <p *ngIf="firstName.errors?.minlength">Firstname must be at least 5 characters.</p>  
+    <p *ngIf="firstName.errors?.isForbidden">Firstname is forbidden.</p>  
 </div>
   <br>
   <div>

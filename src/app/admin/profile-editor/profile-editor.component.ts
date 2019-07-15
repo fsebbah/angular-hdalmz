@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,FormBuilder,FormArray,Validators } from '@angular/forms';
+import { FormGroup,FormControl,FormBuilder,FormArray,Validators,ValidatorFn,AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-profile-editor',
@@ -23,9 +23,15 @@ export class ProfileEditorComponent implements OnInit {
       aliases: new FormArray([])
   })
   */
-  /*
+  
   profileForm = this.fb.group({
-      firstName : ['Franck'],
+      firstName : ['Franck',
+        [
+          Validators.required,
+          Validators.minLength(5),
+          this.forbiddenNameValidator()
+        ]
+      ],
       lastName : ['Sebbah'],  
       address: this.fb.group({
         zip : ['75009'],
@@ -36,7 +42,19 @@ export class ProfileEditorComponent implements OnInit {
         this.fb.control('')
       ])
   })
-  */
+  
+  forbiddenNameValidator(): ValidatorFn{
+    return (control: AbstractControl):{[key: string]:any} => {
+      if(!control){
+        return null;
+      }
+      const isForbidden = control.value === 'franck';
+      if(isForbidden){
+        return {'isForbidden':{value:control.value}};
+      }
+      return null;
+    }
+  }
 
   get firstName(){
     return this.profileForm.get('firstName');
