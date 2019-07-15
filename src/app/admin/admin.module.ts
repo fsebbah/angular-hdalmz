@@ -15,6 +15,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     WelcomeComponent,
     HeroFormComponent,
     NameEditorComponent,
+    ProfileEditorComponent,
     ProfileEditorComponent
   ],  
   imports: [
