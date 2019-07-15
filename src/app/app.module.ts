@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {AdminModule} from './admin/admin.module';
 import { AppComponent } from './app.component';
-import {WelcomeService} from './admin/welcome/welcome.service';
+
 
 //import { HelloComponent } from './hello.component';
 //import {WelcomeComponent} from './welcome/welcome.component';
@@ -15,7 +15,6 @@ import {WelcomeService} from './admin/welcome/welcome.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FormsModule,AppRoutingModule,AdminModule ],
-  providers: [WelcomeService],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
 
