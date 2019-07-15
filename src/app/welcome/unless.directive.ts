@@ -1,10 +1,22 @@
-import { Directive } from '@angular/core';
+import { Directive,TemplateRef,ViewContainerRef,Input } from '@angular/core';
 
 @Directive({
   selector: '[appUnless]'
 })
 export class UnlessDirective {
 
-  constructor() { }
+  private hasView = false;
+
+  constructor(
+    private templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef
+  ) { }
+
+  @Input() set appUnless(condition: boolean) {
+    if(!condition && ! this.hasView){
+      this.viewContainer.createEmbeddedView(this.templateRef)
+    }  
+
+  }
 
 }

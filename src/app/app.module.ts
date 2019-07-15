@@ -8,11 +8,12 @@ import { HelloComponent } from './hello.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { ColorPipe } from './welcome/color.pipe';
-import { HighlightDirective } from './welcome/highlight.directive'
+import { HighlightDirective } from './welcome/highlight.directive';
+import { UnlessDirective } from './welcome/unless.directive'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,WelcomeComponent, LoginComponent, ColorPipe, HighlightDirective ],
+  declarations: [ AppComponent, HelloComponent,WelcomeComponent, LoginComponent, ColorPipe, HighlightDirective, UnlessDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
