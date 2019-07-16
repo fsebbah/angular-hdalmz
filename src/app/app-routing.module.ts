@@ -31,13 +31,24 @@ const routes: Routes = [
     path:'users',
     component: UsersComponent,
     resolve: {users: UsersResolverService},
-    canActivate: [AppGuard]
+    canActivate: [AppGuard],
+    canActivateChild: [AppGuard],
+    canDeactivate: [AppGuard],
+    children: [
+      {
+        path:':id',
+        component: SingleUserComponent,
+        resolve: { user: SingleUserResolverService}
+      }
+    ]
   },
+  /*
   {
     path:'users/:id',
     component: SingleUserComponent,
     resolve: { user: SingleUserResolverService}
   },
+  */
   {
     path: 'login',
     component: LoginComponent

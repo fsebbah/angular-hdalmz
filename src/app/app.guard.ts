@@ -1,22 +1,35 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot,Router } from '@angular/router';
+import { CanActivate,CanActivateChild,CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot,Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import {AppService} from './app.service';
+import {UsersComponent} from './users/users.component';
 
 @Injectable()
-export class AppGuard implements CanActivate {
+export class AppGuard implements CanActivate,CanActivateChild,CanDeactivate<UsersComponent> {
 
   constructor(
     private appService: AppService,
     private router : Router
     ){}
+
+  canDeactivate(component:UsersComponent){
+    return component.confirm();
+  }
+
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    state: RouterStateSnapshot){
       const url = state.url;
-
-    return this.checkLogin(url);
+      return this.checkLogin(url);
   }
+
+  canActivateChild(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot)
+  {
+    return this.canActivate(next,state) && this.appService.isAdmin;
+  }
+
   private checkLogin(url: string): boolean {
     if( this.appService.isLogged) return true;
     this.appService.redirectURL = url;

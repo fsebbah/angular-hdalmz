@@ -11,10 +11,12 @@ import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UsersResolverService} from './users-resolver.service';
 import {SingleUserResolverService} from './single-user-resolver.service';
+import {AppService} from './app.service';
+import {AppGuard} from './app.guard';
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,HttpClientModule ],
-  providers: [UsersResolverService,SingleUserResolverService],
+  providers: [UsersResolverService,SingleUserResolverService,AppService,AppGuard],
   declarations: [ AppComponent, AboutComponent, HomeComponent, WorkHistoryComponent, UsersComponent, SingleUserComponent,LoginComponent ],
   bootstrap:    [ AppComponent ],
 
