@@ -27,7 +27,7 @@
     <input type="text" [(ngModel)]="model.confirm" name="confirm">
   </div>
   
-  <p *ngIf="ngForm.errors?.nomatch">Passwords dont match</p>
+  <p *ngIf="heroForm.errors?.nomatch">Passwords dont match</p>
 
   <label for="">Power</label>
   <select [(ngModel)]="model.power" name="power">
