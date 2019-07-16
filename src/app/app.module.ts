@@ -6,14 +6,12 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { WorkHistoryComponent } from './about/work-history/work-history.component';
 import { UsersComponent } from './users/users.component';
-import { UsersResolverService } from './users-resolver.service';
 import { SingleUserComponent } from './single-user/single-user.component';
-import { SingleUserResolverService } from './single-user-resolver.service';
-
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule,AppRoutingModule ],
-  providers: [UsersResolverService, SingleUserResolverService],
+  imports:      [ BrowserModule,AppRoutingModule,HttpClientModule ],
+  providers: [],
   declarations: [ AppComponent, AboutComponent, HomeComponent, WorkHistoryComponent, UsersComponent, SingleUserComponent ],
   bootstrap:    [ AppComponent ],
 
