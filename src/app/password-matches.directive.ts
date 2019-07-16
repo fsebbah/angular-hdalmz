@@ -7,7 +7,7 @@ import { FormGroup,Validator,ValidatorFn,AbstractControl,ValidationErrors,NG_VAL
     {
       provide: NG_VALIDATORS, useExisting: PasswordMatchesDirective,multi: true
     }
-
+    ]
 })
 export class PasswordMatchesDirective implements Validator{
 

@@ -7,7 +7,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { ForbiddenValidatorDirective } from '../forbidden-validator.directive';
-
+import { PasswordMatchesDirective } from '../password-matches.directive';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -15,7 +15,8 @@ import { ForbiddenValidatorDirective } from '../forbidden-validator.directive';
     HeroFormComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    ForbiddenValidatorDirective
+    ForbiddenValidatorDirective,
+    PasswordMatchesDirective
   ],  
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule

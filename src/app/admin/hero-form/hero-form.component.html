@@ -1,6 +1,6 @@
 <h1>Hero Form</h1>
 
-<form  #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm)">
+<form appPasswordMatches #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm)">
   <label for="">Name</label>
   <input appForbiddenValidator type="text" required #name="ngModel" [(ngModel)]="model.name" name="name">
 
