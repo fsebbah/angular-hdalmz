@@ -19,10 +19,10 @@ export class ForbiddenValidatorDirective implements Validator{
         return null;
       }
       const isForbidden = control.value === 'franck';
+      console.log('isForbidden',isForbidden);
       if(isForbidden){
         return {'isForbidden':{value:control.value}};
       }
       return null;
-    }
   }
 }

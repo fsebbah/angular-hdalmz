@@ -6,6 +6,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { ForbiddenValidatorDirective } from '../forbidden-validator.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     WelcomeComponent,
     HeroFormComponent,
     NameEditorComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    ForbiddenValidatorDirective
   ],  
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule
