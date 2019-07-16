@@ -4,11 +4,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {AdminModule} from './admin/admin.module';
 import { AppComponent } from './app.component';
 import {WelcomeService} from './admin/welcome/welcome.service';
+import { PasswordMatchesDirective } from './password-matches.directive';
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,AdminModule ],
   providers: [WelcomeService],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, PasswordMatchesDirective ],
   bootstrap:    [ AppComponent ],
 
 })
