@@ -6,8 +6,10 @@ import {AboutComponent} from './about/about.component';
 import {WorkHistoryComponent} from './about/work-history/work-history.component';
 import {UsersComponent} from './users/users.component';
 import {SingleUserComponent} from './single-user/single-user.component';
+import {LoginComponent} from './login/login.component';
 import {UsersResolverService} from './users-resolver.service';
 import {SingleUserResolverService} from './single-user-resolver.service';
+
 
 const routes: Routes = [
   {
@@ -34,6 +36,10 @@ const routes: Routes = [
     path:'users/:id',
     component: SingleUserComponent,
     resolve: { user: SingleUserResolverService}
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
