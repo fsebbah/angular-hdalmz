@@ -43,18 +43,7 @@ export class ProfileEditorComponent implements OnInit {
       ])
   })
   
-  forbiddenNameValidator(): ValidatorFn{
-    return (control: AbstractControl):{[key: string]:any} => {
-      if(!control){
-        return null;
-      }
-      const isForbidden = control.value === 'franck';
-      if(isForbidden){
-        return {'isForbidden':{value:control.value}};
-      }
-      return null;
-    }
-  }
+
 
   get firstName(){
     return this.profileForm.get('firstName');

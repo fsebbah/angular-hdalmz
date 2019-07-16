@@ -2,9 +2,10 @@
 
 <form  #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm)">
   <label for="">Name</label>
-  <input type="text" required #name="ngModel" [(ngModel)]="model.name" name="name">
+  <input appForbiddenValidator type="text" required #name="ngModel" [(ngModel)]="model.name" name="name">
   <div *ngIf="name.invalid && (name.dirty || name.touched)">
     <p *ngIf="name.errors?.required">Name is required</p>
+    <p *ngIf="name.errors?.isForbidden">Name is forbidden</p>
   </div>
   <br>
   <br>
