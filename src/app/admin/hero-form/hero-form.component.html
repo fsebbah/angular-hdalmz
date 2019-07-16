@@ -17,6 +17,16 @@
   <br>
   <br>
 
+  <div>
+    <label for="">Password</label>
+    <input type="text" [(ngModel)]="model.password" name="password">
+  </div>
+
+  <div>
+    <label for="">Confirm</label>
+    <input type="text" [(ngModel)]="model.confirm" name="confirm">
+  </div>
+
   <label for="">Power</label>
   <select [(ngModel)]="model.power" name="power">
     <option *ngFor="let power of powers" [value]="power">{{power}}</option>
