@@ -1,0 +1,52 @@
+<h1>Profile Editor</h1>
+
+<form (ngSubmit)="onSubmit" [formGroup]="profileForm">
+  <div>
+    <label for="">First Name</label>
+    <input type="text" formControlName="firstName">
+    <p *ngIf="firstName.errors?.required">Firstname is required !</p>
+    <p *ngIf="firstName.errors?.minlength">Firstname must be at least 5 characters.</p>  
+    <p *ngIf="firstName.errors?.isForbidden">Firstname is forbidden.</p>  
+</div>
+  <br>
+  <div>
+    <label for="">Last Name</label>
+    <input type="text" formControlName="lastName">
+  </div>
+  <br>
+  <div formGroupName="address">
+    <div>
+      <label for="">Zip</label>
+      <input type="text" formControlName="zip">
+      <label for="">City</label>
+      <input type="text" formControlName="city">
+      <label for="">State</label>
+      <input type="text" formControlName="state">
+    </div>
+  </div>
+
+  <div formArrayName="aliases">
+    <h3>Aliases</h3>
+    <button (click)="addAlias()" type="button">Add Alias</button>
+    <div *ngFor="let alias of aliases.controls; let i = index;">
+      <label for="">Alias</label>
+      <input type="text" [formControlName]="i">
+    </div>
+  </div>
+
+  <div>
+    <label for="">Password</label>
+    <input type="text" formControlName="password">
+  </div>
+
+  <div>
+    <label for="">Confirm</label>
+    <input type="text" formControlName="confirm">
+  </div>
+<p *ngIf="profileForm.errors?.nomatch">Passwords dont match</p>
+
+
+  <button type="submit">Submit</button>
+</form>
+
+  <button type="button" (click)="updateProfile()">Update Profile</button>

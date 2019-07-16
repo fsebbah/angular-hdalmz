@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import {AppRoutingModule} from './app-routing.module';
+import {AdminModule} from './admin/admin.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import {WelcomeComponent} from './welcome/welcome.component'
+import {WelcomeService} from './admin/welcome/welcome.service';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent,WelcomeComponent ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule,AppRoutingModule,AdminModule ],
+  providers: [WelcomeService],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ],
+
 })
 export class AppModule { }
