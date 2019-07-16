@@ -8,10 +8,12 @@ import { WorkHistoryComponent } from './about/work-history/work-history.componen
 import { UsersComponent } from './users/users.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import {HttpClientModule} from '@angular/common/http';
+import {UsersResolverService} from './users-resolver.service';
+import {SingleUserResolverService} from './single-user-resolver.service';
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,HttpClientModule ],
-  providers: [],
+  providers: [UsersResolverService,SingleUserResolverService],
   declarations: [ AppComponent, AboutComponent, HomeComponent, WorkHistoryComponent, UsersComponent, SingleUserComponent ],
   bootstrap:    [ AppComponent ],
 
