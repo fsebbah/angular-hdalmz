@@ -10,11 +10,13 @@ import { SingleUserComponent } from './single-user/single-user.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UsersResolverService} from './users-resolver.service';
 import {SingleUserResolverService} from './single-user-resolver.service';
+import { LoginComponent } from './login/login.component';
+import { AppService } from './app.service';
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,HttpClientModule ],
-  providers: [UsersResolverService,SingleUserResolverService],
-  declarations: [ AppComponent, AboutComponent, HomeComponent, WorkHistoryComponent, UsersComponent, SingleUserComponent ],
+  providers: [UsersResolverService,SingleUserResolverService, AppService],
+  declarations: [ AppComponent, AboutComponent, HomeComponent, WorkHistoryComponent, UsersComponent, SingleUserComponent, LoginComponent ],
   bootstrap:    [ AppComponent ],
 
 })

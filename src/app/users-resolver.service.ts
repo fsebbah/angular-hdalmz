@@ -10,7 +10,7 @@ export class UsersResolverService implements Resolve<User[]>{
   constructor(private http: HttpClient) { }
 
   resolve(){
-    return this.http.get<User[]>('http://jsonplaceholder.typicode.com/users');
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
 
 }
