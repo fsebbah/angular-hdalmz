@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,FormBuilder,FormArray,Validators,ValidatorFn,AbstractControl } from '@angular/forms';
+import { FormGroup,FormControl,FormBuilder,FormArray,Validators,ValidatorFn,AbstractControl,ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-profile-editor',
@@ -26,12 +26,11 @@ export class ProfileEditorComponent implements OnInit {
   
   profileForm = this.fb.group({
       firstName : ['Franck',
-        [
-          Validators.required,
-          Validators.minLength(5),
-          this.forbiddenNameValidator()
-        ]
-      ],
+      [
+        Validators.required,
+        Validators.minLength(5),
+        this.forbiddenNameValidator()
+      ]],
       lastName : ['Sebbah'],  
       address: this.fb.group({
         zip : ['75009'],
@@ -40,10 +39,35 @@ export class ProfileEditorComponent implements OnInit {
       }),
       aliases: this.fb.array([
         this.fb.control('')
-      ])
-  })
+      ]),
+      password:[''],
+      confirm:['']
+  },{validators: this.passwordMatchesValidator()})
   
+  passwordMatchesValidator(): ValidatorFn{
+    return(control: FormGroup):ValidationErrors => {
+      const password = control.get('password');
+      const confirm = control.get('confirm');
 
+    if(!password || !confirm) return null;
+    if(password.value !== confirm.value) return {'nomatch':true};
+    return null;
+    }
+  }
+
+
+  forbiddenNameValidator(): ValidatorFn{
+    return (control: AbstractControl):{[key: string]:any} => {
+      if(!control){
+        return null;
+      }
+      const isForbidden = control.value === 'franck';
+      if(isForbidden){
+        return {'isForbidden':{value:control.value}};
+      }
+      return null;
+    }
+  }
 
   get firstName(){
     return this.profileForm.get('firstName');
