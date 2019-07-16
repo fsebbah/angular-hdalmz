@@ -9,7 +9,7 @@ import {SingleUserComponent} from './single-user/single-user.component';
 import {LoginComponent} from './login/login.component';
 import {UsersResolverService} from './users-resolver.service';
 import {SingleUserResolverService} from './single-user-resolver.service';
-
+import {AppGuard} from './app.guard';
 
 const routes: Routes = [
   {
@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path:'users',
     component: UsersComponent,
-    resolve: {users: UsersResolverService}
+    resolve: {users: UsersResolverService},
+    canActivate: [AppGuard]
   },
   {
     path:'users/:id',
