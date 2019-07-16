@@ -7,9 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   title = 'Angular 8';
-  myName = 'David Senior';
+  id = 5;
 
-  getName(){
-      return this.myName;
-  }
 }
